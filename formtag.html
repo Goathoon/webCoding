@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> HTML 강좌 </title>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+</head>
+<body>
+  <h1> input 태그의 type이 text </h1> <!--form tag인데 왜 form은 안씀? 안써도 OK랍니다! -->
+  아이디 <input type = "text" name = "userID" maxlength = "12"/>
+
+  <h1> input 태그의 type이 password </h1>
+  비밀번호 <input type ="password" name = "userPw" maxlength = "12" /> <!--특수문자로 가려져서 표시된 REAL PASSWORD-->
+
+  <h1> input 태그의 type이 checkbox </h1>
+  <h2> 취미 </h2>
+  음악감상 <input type = "checkbox" name = "myHobby" value = "music" /> <!-- 체크박스에서 이미 checked된 상태로 만든다.-->
+  영화감상 <input type = "checkbox" name = "myHobby" value = "movie" checked />
+  수집 <input type = "checkbox" name = "myHobby" value = "collection" />
+
+  <h1> input 태그의 type이 radio button </h1> <!--checkbox는 복수선택이 가능했지만, radiobutton은 불가능하답니다.-->
+  <h2> 취미 </h2>
+  <!-- 이때 라디오 버튼은 복수선택이 불가능해지므로, name은 반드시 통일되어야함.-->
+  음악감상 <input type = "radio" name = "myHobby" value = "music" /> <!-- 체크박스에서 이미 checked된 상태로 만든다.-->
+  영화감상 <input type = "radio" name = "myHobby" value = "movie" />
+  수집 <input type = "radio" name = "myHobby" value = "collection" />
+
+  <h1> input 태그의 type이 button </h1>
+  버튼 <input type ="button" value = "약관을 보시려면 누르세요" /> <!--버튼의 작동은 jQUERY에서 다룬다-->
+
+  <h1> input 태그의 type이 file </h1>
+  <input type = "file" name = "attachedFile" />
+
+  <h1>input 태그의 type이 search </h1>
+  검색 <input type = "search" name = "search" />
+
+  <h1> input 태그의 type이 reset </h1>
+  <p> 입력폼에 값을 입력하고 다시 [입력 버튼을 누르세요.] </p>
+  <form name = "signUp" method = "post" action = "signup.php"> <!--진짜 formtag이다. 하지만 이를 구현하려면 백엔드가 필요하므로, 백엔드의 PHP챕터에서 볼 수 있다-->
+    아이디<input type = "text" name = "userID" value = "" /> <!-- 앞의 것과 같은거죠? ID 즉 text의 input이니 까요-->
+    <input type = "reset" value = "다시 입력" />
+  </form>
+
+  <h1> input 태그의 type이 submit </h1>
+  <form name = "signUp" method = "post" action = "signup.php">
+    <input type = "text" name = "userID" value = "myid" /> <!--value 속성은 백엔드에서 값을 받을때 반드시 필요하답니다-->
+    <input type = "submit" value = "완료" />
+  </form>
+
+  <h1> input 태그의 type이 email </h1>
+  <form name = "signUp" method = "post" action = "signup.php">
+    email <input type = "email" /> <!--유독 조금 신기해보이는 형식, 반드시 @과 도메인이 있어야 submit버튼이 제대로 작동-->
+    <input type ="submit" value = "submit" />
+  </form>
+
+  <h1> input 태그의 type이 url </h1>
+  <form name = "signUp" method = "post" action = "signup.php">
+    <input type ="url" />
+    <input type = "submit" value = "submit" />
+  </form>
+
+  <h1> input 태그의 type이 number </h1>
+  <form name = "signUp" method = "post" action = "signup.php">
+    <input type = "number" pattern = "\d*" /> <!-- 스마트에서 이 입력폼을 이용할 경우 키보드의 숫자키 패드가 나오게 하기 위한 작업-->
+    <input type = "submit" value = "submit" />
+  </form>
+
+  <h1> input 태그의 type이 color </h1>
+  <form name = "signUp" method = "post" action = "signup.php">
+    <input type = "color" />
+  </form>
+
+    <h1> input 태그의 type 이 range </h1>
+  <input type = "range" min = "0" max = "100" value = "50" step = "10" /> <!-- value값은 default 의 기본값입니다. step은 눈치가 있으면 안다-->
+
+  <h1> placeholder의 활용 </h1>
+  <input type= "text" placeholder = "아이디 입력" /> <!--사용자로 하여금 입력창에 무엇을 알려주는지 알려줌. 사용자가 뭘 쓰면 자동으로 사라진다-->
+
+</body>
+</html>

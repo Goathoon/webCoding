@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--메타 태그는 head내에서 작성하는 태그이며 문서의 키워드 어떤 문서인지에 대한 설명,
+언어 설정등의 정보를 기입 -> 광고비 절감-->
+<title> HTML 강좌 </title>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+</head>
+<body>
+  <!--label tag는 input 태그와 짝을 이루어 사용한답니다. 예를들어 성별을 선택하는 기능을 만들려고 한다->중복 선택이 안되는 radiobutton을 활용.
+    하지만, 해당 라디오 박스가 무엇을 의미하는지는 사용자가 볼수있는 명칭을 부여해야한다. 이때 label태그 사용.
+    짝을 이루기 위해서는 input 태그에 id속성을 사용한다. id속성은 태그에 이름을 붙이거나 고유한 명칭을 부여할때 사용한다.
+    id속성의 값은 한버만 사용.
+    label 태그에서는 for라는 속성을 사용. label태그에서 사용한 for속성의 값과 input태그의 id속성의 값을 일치시켜야함.
+    이렇게 일치시키면 label태그를 클릭한것 만으로도 해당하는 input태그를 클릭하는 것과 같은 효과도 얻게 된다.-->
+
+    <h1> label 태그의 활용</h1>
+    <p> 성별 선택</p>
+    <label for = "woman"> 여성 </label>
+    <input type ="radio" name = "gender" value = "w" id = "woman" /> <!--input 태그의 id와 label 태그의 for의 값을 일치시켰다.-->
+    <label for = "man"> 남성 </label>
+    <input type = "radio" name ="gender" value = "m" id = "man" />
+    <!-- 이러면 그냥 글자표시된 label을 클릭해도 라디오버튼도 체크됨-->
+</body>
+</html>

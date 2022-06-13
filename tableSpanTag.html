@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> HTML 강좌 </title>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+</head>
+<!-- align -테이블을 어디에 정렬할 것인지
+     bgcolor - 테이블의 배경색 지정
+     background - 테이블의 배경 그림 지정
+     border - 테이블 테두리의 두께 지정
+     bordercolor -테이블 테두리의 색상 지정
+     cellspacing - 셀과 셀의 간격 지정
+     cellpadding - 셀안의 내용과 여백 지정
+     height - 픽셀로 입력할 떄 절댓값, %단위로 입력시 웹브라우저 크기에 대한 상대값
+     width - 픽셀로 지정할 때 절댓값, %단위로 입력시 웹브라우저 크기에 대한 상대값
+     -->
+
+     <!--tr은 새로운 즐을 생성하고 ,td는 새로운 칸을 생성한다-->
+<body>
+  <section>
+    <h1>가로셀 병합 colspan 활용 </h1>
+    <table width = "100" bgcolor = "skyblue" cellpadding = "10">
+      <tr align = "center" bgcolor = "white">
+        <td colspan = "3">
+          3칸병합 <!--첫 행이 세칸 병합되어짐 "3칸병합"이라고 쓰여-->
+          </td>
+        </tr>
+        <tr align = "center" bgcolor = "white">
+          <td> 1 </td>
+          <td> 2 </td>
+          <td> 3 </td>
+          <td> 4 </td> <!--여기는 남으므로, 1행 4열에는 skyblue색으로 색칠해짐-->
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h1>세로셀 병합 rowspan 활용 </h1>
+      <table width = "200" bgcolor = "skyblue" cellpadding = "1">
+        <tr align = "Center" bgcolor= "white" height = "30">
+          <td rowspan = "3" width = "50%">
+            3줄 병합
+          </td>
+          <td>1</td>
+        </tr>
+        <tr align = "center" bgcolor = "white" height = "30">
+          <td>2</td>
+        </tr>
+        <tr align = "center" bgcolor = "white" height = "30">
+          <td>3</td>
+        </tr>
+        <tr align = "center" bgcolor = "white" height = "30">
+          <td></td> <!--1열 비어있음, skyblue로 색칠하고 싶지 않으면 td로 셀 만드세요-->
+          <td>4</td>
+        </tr>
+      </table>
+    </section>
+
+
+
+</body>
+</html>
