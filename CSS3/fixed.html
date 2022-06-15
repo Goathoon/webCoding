@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+/*fixed 는 스크롤하여 페이지의 어디에 위치하든 관게없이 해당 엘리먼트가 화면위치에 고정됩니다.*/
+.fixed{width:300px;height:200px;background:skyblue;position:fixed;top:0px;left:0px}
+.relative{width:300px;height:200px;background:hotpink;position:relative;top:1000px;left:100px}
+
+</style>
+</head>
+<body>
+  <div class ="fixed">
+    position의 값을 fixed로 적용한 박스
+    </div>
+  <div class = "relative"> <!-- 아무리 relative 여도 fixed에 고정된애를 따라가진 않습니다-->
+    position의 값을 relative로 적용한 박스
+  </div>
+</body>
+</html>

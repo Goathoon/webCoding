@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+#parent{width:500px;height:200px;background:skyblue;position:relative}
+.child{width:240px}
+.child:nth-child(1){height:200px;background:greenyellow;position:absolute;top:0px;left:0px}
+.child:nth-child(2){height:100px;background:hotpink;position:absolute;top:0px;left:250px}
+.child:nth-child(3){height:100px;background:yellow;position:absolute;top:100px;left:250px}
+
+</style>
+</head>
+<body>
+<div id="parent">
+  <div class = "child"> 자식박스 1</div>
+  <div class = "child"> 자식박스 2</div>
+  <div class = "child"> 자식박스 3</div>
+  </div>
+  </body>
+</html>

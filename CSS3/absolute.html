@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+
+  /* absolute는, 부모 엘리먼트에 position 속성값 absolute, fixed, relative가 적용되어 있으면 부모 엘리먼트 안에서 원하는 위치로 이동,
+  적용되어있지 않으면 position 속성값 absolute, fixed, relative가 적용된 좀 더 상위의 부모 엘리먼트 아에서 원하는 위치로 이동. -아직 뭔말인지 이해 x */
+  .absolute{position:absolute; width: 100px; height :100px}
+  .absolute:nth-child(1) {background:skyblue;left:100px;top:400px}
+  .absolute:nth-child(2) {background:hotpink;top:510px;left:210px}
+  .absolute:nth-child(3) {background:yellow;top:620px; left:320px}
+
+</style>
+</head>
+<body>
+
+  <div class = "absolute"> position의 값을 absolute으로 적용한 박스 1</div>
+  <div class = "absolute"> position의 값을 absolute으로 적용한 박스 2</div>
+  <div class = "absolute"> position의 값을 absolute으로 적용한 박스 3</div>
+
+</body>
+</html>

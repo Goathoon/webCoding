@@ -4,10 +4,12 @@
 <meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
 <title> CSS 강좌 </title>
 <style>
+/*텍스트가 영역을 벗어날 떄 쓰는 도구들 */
   .visible{width:180px; height:60px;background:skyblue;overflow:visible}
   .hidden{width:180px; height:60px;background:skyblue;overflow:hidden; position:absolute; left:700px ; top:50px} /* 요런식으로 position absolute를 통해
   절대적인 위치를 지정해서 표현한다고 합니다.*/
   .scroll{width:300px;height:200px;font-size:40px;background:skyblue;overflow:scroll; position:absolute; left:200px ; top:100px}
+
 </style>
 </head>
 <body>
@@ -25,7 +27,8 @@
     안녕하세요.<br />
     이 영역은 overflow를 테스트 하기 위한 영역입니다. <br />
     사용된 값은 scroll입니다.<br /> <!--scroll 이므로, 넘어간 영역은 sroll로 표현 -->
-  </di>
+  </div>
+
 
 </body>
 </html>
