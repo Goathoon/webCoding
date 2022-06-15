@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+.fontSize10{font-size:10px}
+.fontSize20{font-size:20px}
+.fontSize30{font-size:30px ; font-family:Georgia,verdana,sans-serif} /*이러면 폰트까지 한꺼번에 바꿀수 있습니다!!! */
+p{color:black} /* p 에 해당하는 선택자 싹다 orange색으로 변화합니다. 지금은 걍 black으로 지정 했네요. p태그는 싹다 검은색!! */
+#logo{color:rgb(255,0,0)}
+#hexa{color:#00ff00}
+.font1{font-family:Georgia,verdana,sans-serif }
+.child1{font-style:italic;color:black;font-size:30px} /* 폰트 스타일 바꾸기 영역 입니다.*/
+.child2{font-style:oblique;color:black;font-size:30px}
+.child3{font-style:normal;color:black;font-size:30px}
+.child4{font-style:inherit;color:black;font-size:30px}
+
+.fontbold1 {font-weight:100} /*폰트 굵기 바꾸기 영역입니다.*/
+.fontbold2 {font-weight:300}
+.fontbold3 {font-weight:500}
+.fontbold4 {font-weight:700}
+.fontbold5 {font-weight:900}
+.fontboldNormal {font-weight:normal}
+.fontboldBold{font-weight:bold}
+
+.ltm3{letter-spacing:-3px}  /*글자 사이 간격 조정*/
+.ltm2{letter-spacing:-2px}
+.ltm1{letter-spacing:-1px}
+.lt1{letter-spacing:1px}
+.lt5{letter-spacing:5px}
+.lt10{letter-spacing:10px}
+.lt15{letter-spacing:15px}
+.lt20{letter-spacing:20px}
+
+.lineheight100per{line-height:100%} /* 줄 간격 조정 */
+.lineheight150per{line-height:150%}
+.lineheight20px{line-height:20px}
+.lineheight40px{line-height:40px}
+.lineheight80px{line-height:80px}
+
+.underline {text-decoration:underline} /*텍스트에 아랫줄 긋기*/
+.overline {text-decoration:overline} /*텍스트에 윗줄 긋기*/
+.underAndOver{text-decoration:underline overline} /*텍스트에 아랫줄 윗줄 긋기 */
+.lineThrough{text-decoration:line-through} /*텍스트에 가운뎃줄 긋기 */
+.none{text-decoration:none} /*라인 없음 */
+
+.textShadow { color : skyblue ; font-size:100px ; text-shadow:3px 3px black} /* 그림자 넣기. text-shadow: 에서 앞에거는 가로방향 그림자로,
+양수이면 오른쪽으로 3px만큼 늘어남, 음수면 왼쪽이겠죠? 그리고 세로방향은 양수이면 아래로 3px만큼 늘어남, 음수면 위로겠죠? 그리고 다음거는 그림자의 색깔입니다. */
+.textShadowBlur {color : skyblue ; font-size:100px ; text-shadow:3px 3px 3px black} /*3px 뒤에 추가 된거는, 흐림의 크기입니다.*/
+.textShadowDouble {color : skyblue ; font-size:80px ; text-shadow:3px 3px 3px black, 3px 3px 10px hotpink} /*그림자 효과 하나 더 추가 */
+
+
+</style>
+</head> <!--head에 style을 넣었네요-->
+<body>
+  <p class = "fontSize10"> font-size 의 값을 10px로 지정 </p> <!-- p가 무슨뜻인데요.. p 맨 앞에서 배웠던 html언어입니다. 한 줄의 내용표현이죠!-->
+  <p class = "fontSize20"> font-size 의 값을 20px로 지정 </p>
+  <p class = "fontSize30"> font-size 의 값을 30px로 지정 </p>
+  <p id = "logo"> RGB활용한 TEXT입니다. </p>
+  <p id = "hexa"> 16진수 활용한 TEXT입니다.</p>
+  <p class = "font1"> Hello World </p>
+  <p class = "child1"> I am a child1 !! </p>
+  <p class = "child2"> I am a child2 !! </p>
+  <p class = "child3"> I am a child3 !! </p>
+  <p class = "child4"> I am a child4 !! </p>
+
+  <p class = "fontbold1"> boldness 1 </p>
+  <p class = "fontbold2"> boldness 2 </p>
+  <p class = "fontbold3"> boldness 3 </p>
+  <p class = "fontbold4"> boldness 4 </p>
+  <p class = "fontbold5"> boldness 5 </p>
+  <p class = "fontboldNormal"> boldness normal </p>
+  <p class = "fontboldBold"> boldness Bold </p>
+
+  <p class = "ltm3"> 글자와 글자사이 간격 -3px </p>
+  <p class = "ltm2"> 글자와 글자사이 간격 -2px </p>
+  <p class = "ltm1"> 글자와 글자사이 간격 -1px </p>
+  <p class = "lt1"> 글자와 글자사이 간격 1px </p>
+  <p class = "lt5"> 글자와 글자 사이 간격 5px </p>
+  <p class = "lt10"> 글자와 글자사이 간격 10px </p>
+  <p class = "lt15"> 글자와 글자사이 간격 15px </p>
+  <p class = "lt20"> 글자와 글자사이 간격 20px </p>
+
+  <p> line-height를 적용하지 않았습니다. <br /> <!-- br태그는 줄바꿈이죵 ?? -->
+    line-heght 를 적용하지 않았습니다. </p>
+  <p class = "lineheight100per"> line-height 의 값이 100%입니다. <br />
+    line-height의 값이 100%입니다. </p>
+  <p class = "lineheight150per"> line-height 의 값이 150%입니다. <br />
+    line-height의 값이 150%입니다. </p>
+  <p class = "lineheight20px"> line-height 의 값이 20px 입니다. <br />
+    line-height의 값이 20px입니다. </p>
+  <p class = "lineheight40px"> line-height 의 값이 40px 입니다. <br />
+    line-height의 값이 40px입니다. </p>
+  <p class = "lineheight80px"> line-height 의 값이 80px 입니다. <br />
+    line-hegiht 의 값이 80px 입니다. </p>
+
+  <p class = "underline"> I am underline</p>
+  <p class = "overline"> I am overline </p>
+  <p class = "underAndOver"> I have two lines </p>
+  <p class = "lineThrough"> I am line-through </p>
+  <p class = "none"> I have no line </p>
+
+  <p class ="textShadow" > 6월 15일 진짜 비옴.</p>
+  <p class ="textShadowBlur"> 6월 15일 진짜 비옴. 흐림추가 </p>
+  <p class ="textShadowDouble"> 6월 15일 진짜 비옴. 그림자 효과 추가 검은색그림자 감싸는 분홍색그림자 wonderful </p>
+</body>
+</html>

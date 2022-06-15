@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<!-- id가 logo에 CSS적용 -->
+<!-- ID랑 CLASS랑 매우다릅니다. ID는 고유한 값이기 때문에 아이디명을 단 한번만 사용할 수 있습니다.-->
+<!--특정 엘리먼트 안에있는 엘리먼트를 선택하는 방법 -->
+<style>
+#logo{color:orange}
+#container header{color:skyblue}
+</style>
+</head>
+<body>
+  <h1 id="logo"> My Web Service Name</h1> <!-- ID logo style 적용 -->
+  <div id = "container">
+    <header>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+      </ul>
+    </header>
+    <section>
+      <h1>본문제목</h1>
+      <p>본문내용</p>
+    </section>
+    <footer>
+      <div class = "logo"> my web service</div>
+    </footer>
+  </div>
+</body>
+</html>
