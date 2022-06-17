@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+/* float는 HTML 엘리먼트들의 흐름을 제어합니다. 기본값으로 none, left,right가 존재합니다. left적용하면 당연히 왼쪽에 엘리먼트 위치, right이면 오른쪽에위치*/
+div{width:200px;height:200px}
+.box1{float:left;background:skyblue}
+.box2{float:right;background:hotpink}
+.noFloatBox1{background:skyblue}
+.noFloatBox2{background:hotpink}
+.noFloatBox3{background:yellow}
+
+.floatBox1{background:skyblue; float:left; position:relative;left:100px}
+.floatBox2{background:hotpink; float:left}
+.floatBox3{background:yellow; float:left}
+.empty{background:black}
+
+
+</style>
+</head>
+<body>
+  <div class = "box1">float:left가 적용된 박스</div>
+  <div class = "box2">float:right가 적용된 박스 </div>
+ <!--div가 연달아 세개이므로 div1 div2 div3 순서로 line by line으로
+  공간 차지. 물론, size로 width height를 조정하고 눈으로 그렇게 보이지만, 실제로는 가로길이 100%를 차지한다.-->
+  <div class = "noFloatBox1"> </div>
+  <div class = "noFloatBox2"> </div>
+  <div class = "noFloatBox3"> </div>
+
+  <!-- 이런식으로 left를 활용하면 div를 쓰더라도 다음 line으로 안넘어감. 왼쪽부터 순서대로 같은 라인에 박스가 정렬된다. -->
+  <!-- 한가지 더 신기한점은, 브라우저의 킈기를 조정하면 알아서 박스가 크기에 맞게 정렬된다 very good -->
+  <div class = "floatBox1"> </div>
+  <div class = "floatBox2"> </div>
+  <div class = "floatBox3"> </div>
+  <div class = "empty"> 빈공간 분홍으로 처리 </div> <!-- 이친구는 안보입니다. 왜 안보일까요? 이 위에있어야 할 floatbo1이 float처리 되어
+    공중으로 떠버렸기 떄문입니다. 사실 하늘색과 겹쳐있습니다-->
+    <!-- 또 웃긴건 ,글씨는 아래에 쓰여짐 이게 말이 되나...?-->
+  <!--추가적으로 , float는 앞에서 했다시피, 어디서 했죠? position absolute에서 아예 다른 태그의 세계로 간다고 설명했던 것 같은데,
+    비슷하게 생각하는 것이 좋을지도..?-->
+
+  <!-- 이런 경우에는 clear라는 속성을 적용합니다. 즉 어떠한 박스 하나를 아래로 내리고싶은 경우에 말입니다. -->
+
+
+
+
+</body>
+</html>

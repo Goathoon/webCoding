@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+  /*div 태그가 뭐였죠? space 태그중 하나로, 가로영역의 space를 차지합니다 */
+  div {width:200px; height:20px; margin-top:5px; text-align:center}
+  /*margin-top은 박스 바깥 위의 여백을 조정하는 속성입니다. 나중에 뒤에서 다룸 ㅎㅎ */
+  .solid{border:1px solid #000} /*이부분에는 세미 콜론 없이 border의 속성값을 공백으로 쭉 나열합니다 */
+  .dotted{border:1px dotted #000}
+  .dashed{border:1px dashed #000}
+  .double{border:4px double #000}
+  .groove{border:4px groove #000}
+  .ridge{border:4px ridge #ccc}
+  .inset{border:4px inset #ccc}
+  .outset{border:4px outset #ccc}
+  #part { width:150px;height:40px; margin-top:20px}
+  .topBorder{border-top:2px solid #000;position:relative; top :30px}
+  .rightBorder{border-right:2px solid #000;position:relative; top:30px }
+  .bottomBorder{border-bottom:2px solid #000; position:relative; top:30px}
+  .leftBorder{border-left:2px solid #000; position:relative; top:30px}
+</style>
+</head>
+<body>
+  <div class = "solid"> solid </div>
+  <div class = "dotted"> dotted </div>
+  <div class = "dashed"> dashed </div>
+  <div class = "double"> double </div>
+  <div class = "groove"> groove </div>
+  <div class = "ridge"> ridge </div>
+  <div class = "inset"> inset </div>
+  <div class = "outset"> outset </div>
+
+  <div id = "part">
+    <div class = "topBorder"> border-top </div>
+    <div class = "rightBorder"> border-right</div>
+    <div class = "bottomBorder"> border-bottom</div>
+    <div class = "leftBorder"> border-left</div>
+  </div>
+</body>
+</html>

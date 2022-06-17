@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<style>
+/* 반응형 웹이란, 다양한 디바이스(다양한 화면 크기)에 대응하는 웹을 뜻합니다. 모바일 웹은 휴대전화의 액정 크기에 맞춰 제작한 웹페이지를 뜻하며, PC웹은
+모니터 크기에 맞춰 제작한 웹페이지를 뜻함.
+이를 반응형으로 만들려면 모바일,PC웹을 구분할 필요 없이, 화면 사이즈에 따라 CSS속성들의 값을 조정하면 된다.*/
+
+/*반응형 웹에서, font-size 속성값 단위로 em 혹은 rem을 사용.
+em은 값을 부모태그의 font-size 속성값을 기준으로 설정,
+rem은 최상위 태그의 font-size 속성값을 기준으로 설정.
+예를들어, html 태그의 font-size의 속성값을 10px로 설정하고, 하위 엘리먼트의 font-size속성값을 1rem으로 설정하면, 해당 엘리먼트의 font-size값은 10px이고,
+값을 1.5rem으로 하면, 15px가 된다.
+즉, html 태그의 font-size 속성값에 곱셈을 한 격.*/
+
+html{font-size:20px}
+.rem1{font-size:1rem}
+.rem2{font-size:2rem}
+.rem3{font-size:3rem}
+.rem5{font-size:5rem}
+.rem8{font-size:8rem}
+</style>
+</head>
+<body>
+  <p class = "rem1"> 1rem을 적용</p>
+  <p class = "rem2"> 2rem을 적용</p>
+  <p class = "rem3"> 3rem을 적용</p>
+  <p class = "rem5"> 5rem을 적용</p>
+  <p class = "rem8"> 8rem을 적용</p>
+  <!-- 이때 최상위 태그인 html태그의 font-size를 20px로 바꾸면 모든 rem1,~rem8까지 2배 커지겠죠?-->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+.notOpacity {width:100%;height:100px;background:skyblue}
+.opacity {width:100%;height:100px;background:skyblue;position:relative;top:30px;opacity:0.5}
+/* relative 포지션 으로, 앞영역의 background보다 30px아래에서 background가 그려짐 */
+
+.opacityWithNoAlpha {width:100%; height:100px; position : relative; top : 30px;background:rgb(227,180,191)}
+.opacityWithAlpha { width : 100%; height:100px; position:relative; top:30px; background:rgba(227,180,191,0.5)}
+/*이러면 글자는 투명해지지 않고, 배경색만 투명해 진답니다 */
+
+/*박스에 그림자 효과 넣기 */
+.notShadowEffect{width:200px;height:200px;background:hotpink; position:relative; top:30px}
+.shadowEffect{width:200px;height:200px;position:relative;top:60px;background:skyblue;box-shadow:10px 10px 50px skyblue}
+/* shadow 값 순서는 가로,세로,번짐효과,그림자색 순이다. 양수면 가로기준 오른쪽, 세로기준 아래쪽입니다. */
+</style>
+</head>
+<body>
+  <div class = "notOpacity"> Hello World!
+    투명도를 적용하지 않은 영역 </div>
+  <div class = "opacity"> Hello World!
+    투명도를 적용한 영역 </div>
+  <div class = "opacityWithNoAlpha"> Hello World!
+    alpha값을 적용하지 않고 투명도를 지정하지 않은 영역 </div>
+  <div class = "opacityWithAlpha"> Hello World! <!-- 이렇게 되면 글자 또한 투명해진답니다 -->
+    alpha 값을 적용하여 투명도를 지정한 영역
+    </div>
+  <div class = "notShadowEffect"> box-shadow가 적용되지 않은 박스 </div>
+  <div class = "shadowEffect"> box-shaodow가 적용된 박스 </div>
+</body>
+
+
+</html>

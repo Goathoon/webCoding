@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<style>
+/*
+선택자{transition : 적용할CSS속성,지속시간,표현효과종류}
+선택자: hover{transition에 사용할 css속성}
+
+속성 설명 :
+선택자: hover는 마우스를 올려 놓았을때의 css선택자
+적용할 css 속성: hover 선택자에 적용한 css속성중, transition효과를 적용할 css속성을 적는다
+지속시간 : transition효과가 적용될 시간
+표현효과 종류 : 어떤 속도로 적용할 것인가
+linear : 일정한 속도
+ease : 느리게 - 빠르게 - 느리게
+ease-in: 시작 시 느리게
+ease-out: 종료 시 느리게 */
+
+.box{width:100px; height:100px; margin:50px 100px; background:skyblue}
+.rotateX{transform: rotateX(0deg);transition:all 10s linear}
+.rotateX:hover{transform:rotateX(360deg)} /*hover는 가상선택자로, 해당 엘리먼트에 마우스 포인터를 올려놓았을 때를 의미하는 선택자이다. */
+.rotateY{transform:rotateY(0deg);transition:transform 10s linear}
+.rotateY:hover{transform:rotateY(360deg)}
+
+
+.myBox{width:100px; height:100px; background:hotpink;
+  transition:width 2s ease, background 4s linear} /*width는 2초에 걸쳐서 느리게-빠르게-느리게 변하고, background는 4초에 걸쳐 일정한 속도로 변한다 */
+                                                  /* 적용할 css속성에서 all을 하지 않고, transition을 적용할 css속성을 직접 입력함 따라서 height는 해당사항 x*/
+.myBox:hover{width:200px; height:200px; background:skyblue}
+/*이렇게 되면 width와 background만 천천히 변하고, height는 중간과정 없이 바로 200px로 변합니다.*/
+
+</style>
+</head>
+<body>
+  <div class = "box rotateX">
+    rotateX
+  </div>
+  <div class = "box rotateY">
+    rotateY
+  </div>
+  <div class = "myBox">
+    everdevel
+  </div>
+</body>
+</html>

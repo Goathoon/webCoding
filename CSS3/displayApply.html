@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<style>
+/* 태그에는 block 방식과 inline 방식이 있으며, 이 방식은 display 속성을 사용하여 변경할 수 있다.
+예를들어 div태그는 block방식이지만, inline방식으로 변경할 수 있다. 즉 태생을 바꿀 수 있다는 것입니다.
+display 속성에 사용되는 값은 block, inline, inline-block, none 이 있다. */
+
+/*
+inline 방식 - 이전 태그와 붙어서 차곡차 쌓인다는 느낌 span 태그를 떠올려보세요.
+span 태그란, space태그의 한 종류로써, 글자 크기만크믜 공간을 차지하기 때문에 이후의 들어오는 태그들은 이후의 남은 공간에 표시됨
+따라서 width 와 height의 속성과 같은, 간격과 넓이 지에 대한 속성은 반영되지 않습니다.
+block 방식 - 그냥 냅다 한 공간을 다 차지해버림. div태그를 떠올려보세요.
+*/
+
+div{width:200px;height:60px;font-size:20px;display:inline}
+div:nth-child(1){background:skyblue}
+div:nth-child(2){background:hotpink}
+div:nth-child(3){background:greenyellow}
+</style>
+</head>
+<body>
+  <div> first box </div>
+  <div> second box </div>
+  <div> third box </div>
+  <!-- display방식을 inline으로 설정해서, 순차적으로 first ,second third 각각 div에서 설정된 size만큼의 크기로, 차곡차곡 정렬됩니다 (한라인을 모두 차지x)-->
+  <!-- 이떄 width는 100px 이지만, block 방식과 다르게, width height속성이 반영되지 않는다는 사실을 아셔야 합니다. 따라서 글자크기만큼의 공간을 차지함-->
+
+</body>
+</html>

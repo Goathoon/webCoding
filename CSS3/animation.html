@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<style>
+.move{width:100px;height:80px;border-radius:20px;background:skyblue;position:relative;animation:move 3s 1}
+@keyframes move {
+  from{ /*시작할 CSS 속성과 값 */
+    left:0
+  }
+  to{
+    left:1000px
+  }
+}
+.move p{float:left;width:100%text-align:center;margin:30px 0 0 0;font-size:20px;color:#fff;font-weight:bold} /*move의 아들이죠? 따라서
+move class 를 사용해 이 아들값을 따라가는 것 같은데 솔직히 잘 모르겠습니다. move 안에 있는 p태그를 지칭하는가 ? 더 알아봅시다 . */
+
+</style>
+</head>
+<body>
+  <div class = "move"> <p> animation </p> </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<style>
+/*inline-block은 inline의 특성처럼 자기 자신의 크기만을 가지면서도, width 속성이나 height 속성이 설정되어 있는 경우,
+block과 마찬가지로 그 크기를 따른다.*/
+
+div{width:200px; height:100px; font-size:50px; display:inline-block} /*원래 inline방식으로 display의 속성값을 지정했다면 height, width는 적용되지않음.
+하지만 inline-block 이므로 적용이 될것입니다. */
+div:nth-child(1){background:skyblue}
+div:nth-child(2){background:hotpink}
+div:nth-child(3){background:greenyellow}
+
+
+</style>
+</head>
+<body>
+  <div> first box </div>
+  <div> second box </div>
+  <div> third box </div>
+  <!-- display방식을 inline으로 설정해서, 순차적으로 first ,second third 각각 div에서 설정된 size만큼의 크기로, 차곡차곡 정렬됩니다 (한라인을 모두 차지x)-->
+  <!-- 이떄 width는 100px 이지만, block 방식과 다르게, width height속성이 반영되지 않는다는 사실을 아셔야 합니다. 따라서 글자크기만큼의 공간을 차지함-->
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+/*박스의 바깥 여백을 조정하려면 margin 속성을 사용한다
+총 4개 입력 가능
+선택자 {margin:20px} = 모든 방향 여백 20px
+선택자 (margin:20px 30px) = 위아래 20px 양 옆 30px 여백
+선택자 (margin:20px 30px 10px) = 위 20px 양옆 30px 아래 10px
+선택자 (margin:20px 10px 50px 20px) = 위 20px 오른쪽 10px 아래 50px 왼쪽 20px 값이 4개인 경우 시계방향순으로 적용
+또한, 속성에 방향을 지정하고 싶으면 margin-top margin-right과 같이 사용하면됨. 앞에서 border 에서 했습니다..! */
+
+div{width:150px;height:150px}
+.targetBox{float:left;background:skyblue;margin:30px}
+.box1{float:left;background:hotpink}
+.box2{clear:both;float:left;background:yellow}
+
+.targetBox2{clear:both; float:left;background:skyblue;margin:10px 130px}
+
+.targetBox3{clear:both; float:left; background:skyblue; margin:10px 130px 200px}
+</style>
+</head>
+<body>
+  <div class = "targetBox"> target box </div>
+  <div class = "box1"> side box</div>
+  <div class = "box2"> bottom box </div>
+
+  <div class = "targetBox2"> targetBox2 </div>
+  <div class = "box1"> side box2</div>
+  <div class = "box2"> bottom box2 </div>
+
+  <div class = "targetBox3"> targetBox3 </div>
+  <div class = "box1"> side box3 </div>
+  <div class = "box2"> bottom box3 </div>
+</body>
+</html>

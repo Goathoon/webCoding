@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+/*박스의 안쪽 여백을 설정하기 위해서 padding 속성을 사용한다 margin(outOfBox)방식과 동일하게 padding 속성값과 동일한 순서와 방식이다. */
+
+/*유의해야할점은, 박스의 height를 100px로 지정하고, padding-top 의 속성값ㅇ르 20px로 지정하면, 그 박스의 길이가 120px인것 처럼 보인다. 이를 확인해보자 */
+div{float:left;width:100px;height:100px} /*floqt를 사용한 이유는 같은 div 라인선상에 위치시켜서 세로길이의 차이를 잘 보이기 위해서 */
+.notPadding{background:skyblue}
+.padding{background:hotpink;padding-top:50px}
+
+
+</style>
+</head>
+<body>
+  <div class = "notPadding"> padding이 적용되지 않은 박스 </div>
+  <div class = "padding"> padding이 적용된 박스 </div> <!-- 이러면 padding class에서 padding-top 한 만큼 세로길이가 증가합니다 -->
+
+  <!--위와 같이 세로길이의 차이가 안생기게 하기 위해서, padding에 적용된 값만큼 줄여서 적용하는 방법이 있습니다.
+    이는 박스안의 엘리먼트에 margin을 적용하는 방법 ..?-->
+
+</body>
+</html>

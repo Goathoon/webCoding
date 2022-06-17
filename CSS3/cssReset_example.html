@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+/* 항상 어떤 태그를 사용하든지 간에, body태그와 박스 사이에 여백이 존재했다. 그 이유는 body태그 div span 태그등에 margin padding 의속성값이
+default로 저장된 값이 있기 때문이다. 그리고 이 값은 웹브라우저마다 다르게 설정 되어있으므로, 우리는 이를 방지하기 위해 임의로
+default를 0으로 조정할 필요가 있다. 이를 "CSS 리셋" 이라고 부른다.*/
+
+body, div, span, section, header, aside, footer, ul, ol, li, h1, h2, h3, h4 ,h5, form input, p, b, em, button{margin:0;padding:0} /*이게 초기화의 방법 */
+div{width:200px;height:200px;background:skyblue}
+</style>
+</head>
+<body>
+  <div><p>CSS리셋이 적용된 페이지의 박스 </p> </div> <!-- 이런식으로 class 지정안해도 p태그만으로도 박스안의 텍스트를 설정할 수 있다. -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<style>
+div{float:left;margin-left:10px;width:100px;height:100px} /*margin 은 박스 바깥의 여백을 다룰 떄 했던 속성입니다 */
+.normal{background:yellow}
+.padding{background:hotpink;padding:100px 0 0 0}
+.padding2{background:purple;height:70px;padding:30px 0 0 0} /*padding으로 늘어난 만큼 height를 조정하였으므로 good */
+.margin{background:skyblue}/*padding의 속성을 사용하지 않고, 자식엘리먼트에 margin을 적용하여서, 사실상 margin박스 사이즈에는 영향을 주지 않는다 (솔직히 아직 이해 안됨) */
+.margin p {margin:30px 0 0 0}
+</style>
+</head>
+<body>
+  <div class = "normal"> 기본박스 </div>
+  <div class = "padding"> padding이 적용된 박스 </div>
+  <div class = "padding2"> padding이 적용된 박스 </div>
+  <div class = "margin">
+    <p> 자식 요소에 margin 적용 </p>
+</body>
+</html>

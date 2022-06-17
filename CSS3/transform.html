@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<style>
+/*transform속성은, 각도 변경/확대/기울임 기능을 구현할 수 있는 속성입니다.*/
+
+.tf{width:100px; height:100px;margin:100px;background:yellow;transform:rotate(40deg)} /* 2차원 상에서 40도 기울임 */
+.box{float:left; width:100px; height:100px; margin:50px; background:yellow}
+
+/*3차상에서의 각도 기울임 */
+.rotateX{transform:rotateX(50deg)}
+.rotateY{transform:rotateY(50deg)}
+
+/*확대, 축소 하기 */
+.transform2{transform:scale(2)}
+.baseBox{transform:scale(1)}
+.transformHalf{transform:scale(0.5)}
+.transformEach{transform:scale(0.5,2)} /*scale(a,b) 에서 a는 가로 확대값, b는 세로 확대값 */
+
+/*기울이기*/
+.skew_x{transform:skew(50deg, 0deg)}
+.skew_y{transform:skew(0deg,50deg)}
+.skew_xy{transform:skew(20deg,20deg)}
+</style>
+</head>
+<body>
+  <div class = "tf"> <p> transform </p> </div>
+  <div class = "rotateX box"> rotateX를 적용</div> <!-- 클래스명이 매우 이상하죠, .box 와 .rotateX클래스의 짬뽕을 하면 이렇게 되는군요.-->
+  <div class = "box"> rotate를 적용하지 않은 박스 </div>
+  <div class = "rotateY box"> rotateY를 적용 </div>
+
+  <div class = "transform2 box"> scale값 2 적용 </div>
+  <div class = "baseBox box"> scale값 1 적용 </div>
+  <div class = "transformHalf box"> scale 값 0.5적용 </div>
+  <div class = "transformEach box"> scale 값 0.5와 2 적용 </div>
+
+  <div class = "box skew_x">
+    기울이기를 가로만 적용 <!-- 당초에 skew 속성에다가 가로가 50, 세로가 0을 넣었으니까 가로만 적용 되겠죠?-->
+  </div>
+  <div class = "box skew_y">
+    기울이기를 세로만 적용
+  </div>
+  <div class = "box skew_xy">
+    기울이기를 가로 세로 모두 적용
+  </div>
+</body>
+</html>
