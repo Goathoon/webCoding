@@ -1,0 +1,40 @@
+/*common source */
+html {font-size:10px; min-width:320px} /*만인의 최상위 부모입니다. 기본 설정 */
+header{width:100%; background:skyblue; padding:10px 0 10px 0; display:inline-block} /*박스 내부를 위한 padding*/
+header nav{_float:left}
+header nav ul{_float:left; width:100%}
+header nav ul li{float:left; color:#fff; text-align:center} /*이런식으로 header 다음에 공백으로 띄어서 연결하는 것은 하위 클래스임 */
+#content{width:100%}
+#myVisual{width:100%;
+  background:url('https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/1552aee2f1704b62b7e7628cff0cbc2c/9106f352eb2545a2b2c9f17c646160dc_1620190538.jpg');
+  background-size:cover;background-position: 0 50%}
+#myVisual section{width:80%;margin:0 auto;position:relative;top:40%}
+#myVisual section p {float:left;width:100%;text-align:center;color:#fff}
+#webIntro{clear:both;float:left;width:100%; background:hotpink;padding:50px 0 50px 0}
+.webIntroCenter{width:90%;margin:0 auto} /*auto 는 자동으로 중앙에 배치한다는 뜻이다 */
+.blah{float:left;width:23%;height:50px;border:1px solid #fff; border-radius:10px}
+.blah p{float:left;width:100%;text-align:center;color:#fff;margin-top:12px} /*blah클래스에서 p태그에 관한 style 지정 */
+
+footer{clear:both; float:left;width:100%;border-bottom:1px solid #000;padding:20px 0 20px 0}
+footer h1{width:100%;text-align:center;font-size:2em}
+
+/*mobile web*/
+@media screen and  (min-width:0px) and (max-width:600px){
+  #logo{float:left;width:100%;font-size:3em;color:#fff;text-align:center}
+  header nav{width:100%}
+  header nav ul li{float:left;width:16%;font-size:1em}
+  #myVisual{height:300px}
+  #myVisual section p {font-size:2em}
+  .blah{clear:both;float:left;width:100%;text-align:center}
+  .blah2{margin:10px 0px}
+}
+/* pc Web */
+@media screen and (min-width:601px){ /*가로로 601px 커질때 적용 (미디어 쿼리)*/
+  #logo{font-size:3em;color:#fff;margin-left:5%;display:inline-block}  /*em은 부모태그 기준임, margin-left:5%는 왼쪽 여백 말하는 것, inline-block으로
+  자기자신의ㅣ 크기를 가지게끔 하였다.*/
+  header nav{float:right;margin-top:10px}
+  header nav ul li{width:100px;font-size:1.3em}
+  #myVisual{height:400px}
+  #myVisual section p {font-size:4em}
+  .blah2{margin:0 14% 0}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" /> <!--전 세계 언어의 글자 깨짐 방지-->
+<title> CSS 강좌 </title>
+<link rel = "stylesheet" href="./cssEx/cssReset.css" /> <!--external 방식으로 cssReset을 불러온다. -->
+<!-- external 방식으로 미디어쿼리를 사용할 수도 있다
+  <link rel = "stylesheet" media = "(min-width:640px) and (max-width:700px)" href = "CSS파일 경로" /> -->
+<style>
+/* 미디어쿼리를 이용하면 웹브라우저의 길이에 따라 적용할 CSS를 따로 작성할 수 있다. 예를들어
+웹브라우저의 가로길이가 0px부터 500px까지 적용될 CSS를 적는 방법은 다음과 같다.
+@media screen and (min-width:0px) and (max-width:500px){
+  적용할 CSS 작성
+}
+*/
+li{width:100px;}
+@media screen and (min-width:0px) and (max-width:500px){
+  li{clear:both;float:left} /*clear float 알죠? 다음 line으로(세로방향으로) 내릴 수 있습니다. */
+}
+@media screen and (min-width:501px){
+  li{float:left} /*그냥 쭉 이어서 li가 되네요.
+}
+
+/*설명하자면, li 태그를 이용하여 메뉴를 만들고, 500px이하면 세로로 나열, 500px 초과하면 가로로 나열됩니다. */
+</style>
+</head>
+<body>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>jQuery</li>
+    <li>MySQL</li>
+    <li>PHP</li>
+    </ul>
+</body>
+</html>
