@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+$(function(){
+  //변수 선언
+  addCss = $('#addCss');
+  addCss.click(function(){
+    addCss.css('background','skyblue');
+    addCss.css('border-radius','10px');
+  });
+  hello = "안녕하세요!";
+  //연결자까지 사용
+  hellohi = " hi~";
+  alert(hello+hellohi);
+});
+</script>
+</head>
+<body>
+  <div id = "addCss"> 저를 클릭하면 배경과 border-radius를 적용합니다. </div>
+</body>
+</html>

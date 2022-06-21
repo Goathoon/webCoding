@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+  div{float:left; width:100px; height:100px; margin:20px}
+  #greeting{margin:50px}
+  #box1{background:skyblue}
+  #box2{background:hotpink}
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+  $(function(){
+    greeting = $('#greeting');
+    greeting.click(function(){
+      greeting.text("클릭 후 입니다.");
+    });
+    box1 = $('#box1');
+    box2 = $('#box2');
+    box1.click(function(){
+      box2.text(box1.text());
+    });
+  });
+</script>
+</head>
+<body>
+  <div id = "greeting"> 클릭 전 입니다.</div>
+  <div id = "box1"> hello World! </div>
+  <div id = "box2"> </div>
+</body>
+</html>

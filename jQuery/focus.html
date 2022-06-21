@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+$(function(){
+  $('#gender').focus(); //id = 'gender' 에 포커스 기능 추가.
+  $('#location').focus(function(){ // id = 'location' 즉, 장소 입력 폼에 포커스를 줄 때 alert()가 작동함.
+    alert('장소는 국가만 입력해 주세요.');
+  });
+});
+</script>
+</head>
+<body>
+  <input type = "text" id = "name" placeholder = "이름을 입력하세요."/><br />
+  <input type = "text" id = "age" placeholder = "나이를 입력하세요."/><br />
+  <input type = "text" id = "gender" placeholder = "성별을 입력하세요."/> <br />
+  <input type = "text" id = "location" placeholder = "장소를 입력하세요." />
+</body>
+</html>

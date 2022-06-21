@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+#parent #parent2{width:100px; height:100px; background:skyblue} /* parent 부모 안에있는 parent2에 적용할 css 속성을 의미합니다 */
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+$(function(){
+  parent = $('#parent');
+  parent2 = $('#parent2');
+  btn = $('#btn');
+
+  btn.click(function(){
+    parent.append(parent2); //parent2 의 엘리먼트를 parent의 자식엘리먼트로 이동시킵니다. 따라서 css <style>에서 적용했던 속성이 반영됩니다.
+  })
+})
+</script>
+</head>
+<body>
+  <div id = "parent">
+    부모 엘리먼트1
+  </div>
+  <div id = "parent2">
+    부모 엘리먼트2
+  </div>
+  <input id = "btn" type = "button" value = "버튼" />
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+div{float:left;width:200px;height:50px;padding:20px;background:skyblue}
+.displayNone{display:none}
+.displayYes
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+  $(function(){
+    $('#fadeIn').fadeIn(); //신기한거는 이렇게 jQuery 상에서 id를 만들수 있다는 사실입니다 ..!
+    $('#fadeIn5000').fadeIn(5000);
+    $('#fadeOut').fadeOut();
+    $('#fadeOutp5000').fadeOut(5000);
+  });
+
+</script>
+</head>
+<body>
+  <div class = "displayNone" id = "fadeIn">
+    fadeIn() 적용
+  </div>
+  <div class = "displayNone" id = "fadeIn5000">
+    fadeIn(5000)적용
+  </div>
+  <div class = "displayYes" id = "fadeOut"> <!-- fadeOut하면 이거 사라져서 다음 fadeout5000이 자리 차지함 -->
+    fadeOut() 적용
+  </div>
+  <div class = "displayYes" id = "fadeOut5000">
+    fadeOut(5000) 적용
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+//함수 내에서 var을 붙이지 않으면 모두 글로벌 변수로 지정된다. 그리고 함수 내에서 var을 붙이면 로컬 변수로 지정됩니다. 함수 밖에서는 항상 global
+$(function(){
+  var num1 = 10; //global
+  var num2 = 20; //global
+
+  function myFunction(){
+    var num1 = 100; //local
+    num2 = 200; //global
+    }
+
+  myFunction();
+  console.log('num1 is ' + num1);
+  console.log('num2 is ' + num2);
+})
+</script>
+</head>
+<body>
+</body>
+</html>

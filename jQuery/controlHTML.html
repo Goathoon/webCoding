@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+  #box1{float:left; width:300px; height:100px; margin:20px; background:skyblue}
+  #box2{float:left; width:300px; height:100px; margin:20px; background:hotpink}
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+  $(function(){
+    box1 = $('#box1');
+    box1.click(function(){
+      //이러면 이미지 태그로 아예 바뀐다.
+      box1.html("<img src = 'https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/1552aee2f1704b62b7e7628cff0cbc2c/9106f352eb2545a2b2c9f17c646160dc_1620190538.jpg' />");
+      $('#box1 img').css('width','100px');
+    });
+
+      //만약 box내용을 유지하면서 새로 입력한 태그를 추가시기 위해 어떻게 해야하는가?
+      box2 = $('#box2');
+      box2.click(function(){
+        //새로운 변수를 만든 후 기존의 box2 안에 있는 내용을 대입
+        box2Content = box2.html();
+        image = "<img src = 'https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/1552aee2f1704b62b7e7628cff0cbc2c/9106f352eb2545a2b2c9f17c646160dc_1620190538.jpg' />";
+        box2.html(box2Content+image);
+
+        //이미지 사이즈 조정
+        $('#box2 img').css('width','100px'); //box2의 child인 img ?????
+      });
+    });
+</script>
+</head>
+<body>
+  <div id = "box1">
+    이 박스를 클릭하면 이미지가 나옵니다.
+  </div>
+  <div id = "box2">
+    이 박스를 클릭하면 이미지가 나옵니당.
+  </div>
+</body>
+</html>
