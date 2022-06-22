@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--왜 tag인데 제이쿼리에 있나요?
+  SVG와 달리 스크립트언어를 함꼐 사용해야 하는 태그이기 떄문입니다~
+  canvas 태그를 사용하려면 선택자를 이용하여 canvas태그를 선택해야 하지만, 제이쿼리의 선택자를 사용하면 에러가 발생하므로, 자바스크립트를 이용하여야 합니다-->
+<html>
+<head>
+<meta charset = "utf-8" />
+<title> jQuery 강좌 </title>
+<link rel = "stylesheet" href = "../CSS3/cssEx/cssReset.css" />
+<style>
+</style>
+<script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+<script>
+  //canvas 태그의 width 와 height 는 그림을 그릴 도화지의 크기를 지정한다고 생각하면 됩니다.
+  //앞의 canvas태그를 선택하려면 다음과 같은 자바스크립트 선택자를 사용해야 합니다.
+  //id를 선택할 떄는 document.getElementById(아이디명)을 사용하며, class를 선택할 떄는 document.getElementsByClassName(클래스명)을 사용합니다.
+
+
+
+  //canvs 태그를 테스트해보면 페이지가 전부 로딩되기 전에 스크립트 소스들이 실행되어 오류가 발생합니다.
+  //즉, 페이지가 canvas태그를 읽기 전에 스크립트소스(제이쿼리, 자바스크립트)가 실행되어 canvs태그를 선택자로 지정하는 소스가 canvs태그를 찾지못해 에러가 발생
+  //이 경우에는 페이지의 모든 태그의 로딩이 완료되면 스크립트가 실행되도록 해야한다.
+
+  $(document).ready(function(){ //문서 로딩이 완료되면 실행합니다.
+    var box = document.getElementById("box"); //canvas 선택
+    var box1 = document.getElementById("box1");
+    //이는 제이쿼리의 var box = $('#box');와 기능이 동일.
+    var canvas = box.getContext("2d"); //2d로 그리기 지정
+    var canvas1 = box1.getContext("2d");
+    //하늘색으로 색 채우기
+    //선의 시작 위치 설정
+    canvas.moveTo(50,50);
+    //선의 끝 위치 설정
+    canvas.lineTo(300,100);
+    //선 그리기 기능 적용
+    canvas.stroke();
+
+    canvas.fillStyle = "skyblue"; //canvs 태그에 색 채우는 코드
+    //사각형 만들기
+    canvas.fillRect(10,10,120,120); //fillRect(가로위치,세로위치,가로길이,세로길이)
+  })
+</script>
+</head>
+<body>
+  <canvas id = "box" width = "500" height = "500">
+    현재의 웹브라우저에서는 canvas 태그를 지원하지 않습니다.
+  </canvas>
+  <canvas id = "box1" width = "500" height = "500">
+    현재의 웹브라우저에서는 canvs 태그를 지원하지 않습니다.
+  </canvas>
+</body>
+</html>
