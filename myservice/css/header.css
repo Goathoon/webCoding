@@ -1,0 +1,73 @@
+/* index.html에는 로그인 전과 로그인 후의 소스가 함께 들어있었음.
+로그인한 후 header 태그 안의 요소를 보이지 않도록 설정하여 CSS코드를 만들기 편리하게 만듭시다. */
+
+/*로그인 후 요소 안보이게 처리 */
+#viewType, #myName{display:none} /*viewType 과 myName은 index.html파일에서 header에 존재하는 로그인 후의 보여지는 id Value입니다.*/
+/* common */
+header { clear:both; float: left; width: 100%; background:rgba(85,191,247,0.7)}
+#loginForm form{float:left; width:100%} /* 로그인 전의 id Value값 입니다. */
+#viewType{clear:both; width:100px; height:25px; margin: 0 auto;border-left:1px solid #ccc; border-right:1px solid #ccc} /* link태그들의
+틀 에관한 css 설정 margin: 0 auto는 자동 중앙 정렬롤 알고있네요*/
+#meLink{float:left; width:50%; height:17px; border-right:1px solid #ccc; text-align:center; padding:8px 0 0 0; color:#aaa}
+#allLink{float:left; width:49%; height:17px; text-align:center; padding:8px 0 0 0; color:#aaa} /*width:50% 하면 넘어감 */
+/*mobile 과 pc화면의 차이를 조정하기 위해 사용하는 것은 미디어 쿼리다. */
+/*me 하고 all 이 완벽히 가운데 정렬이 안됩니다...ㅠㅠ 네, cssReset.css가 적용이 안되었기 때문이었네요 ㅎ*/
+
+/*mobile*/
+@media screen and (min-width:0px) and (max-width:1199px){/*index.html에서 header에 존재하는 myServic ID에 적용할 CSS 미디어 쿼리 입니다*/
+  #myService{float:left;color:#fff;width:100%;font-size:2rem; text-align:center; margin-bottom:1rem} /*rem은 최상위 태그를 기준 */
+  #loginForm{clear:both}
+  #loginEmailArea, #loginPwArea{clear:both;float:left;width:100%}
+  #loginPwArea{margin-top:0.4rem}
+  .loginInputBox{float:left;width:59%; border:1px solid #ccc; background:#fff} /*여기는 사용자가 작성하는 전체 '틀'의 CSS 요구 사항. */
+  #loginEmailArea label, #loginPwArea label {float:left;width:25%; padding-left:0.5rem;font-size:1.5rem; color:#fff}
+  #loginEmailArea input, #loginPwArea input {float:left; width:100%; padding-left:0.5rem; font-size:1.5rem;border:none;background:#fff}
+  /*만일 input들의 width:50%라면, 사용자 작성 틀의 50%만 input을 입력할 수 있음 */
+  /*padding-left 는 input 박스에서 첫 시작시 보기좋게 띄어  쓰는 용도이다. 딱붙으면 보기 불편하잖아용?*/
+  .loginSubmitBox{clear:both;float:left;background:#fff;border:1px solid #ccc;margin:0.5rem 0 1rem 2rem; padding:0.3rem}
+  #loginSubmit{clear:both;float:left;width:100%;background:none;border:none;color:#000;font-size:1rem}
+
+  #loginForm{_display:none} /*로그인 전의 요소를 보이지 않게 합시다 */
+  #myName{float:left; width:100%; background:#fff; border-bottom:1px solid #ccc; padding:0.3rem 0 0.3rem 0}
+  #myName p {float:left; margin-left:2%; font-size:1rem}
+  /*책처럼 완벽히 로그인 되어있는 그 div처럼 출력이 되지 않음 -네, cssReset.css가 적용이 안되었기 때문이었네요  */
+  #logoutBox {float:right; margin-right:5%;border: 1px solid #ccc; margin-top:1px}
+  #logoutBox input{border:none; background: none; padding:0.1rem 0.3rem; margin-top:1px; cursor:pointer;font-size:0.5rem}
+}
+@media screen and (min-width:1200px){
+  #myService{float:left; color:#fff; font-size:2rem; text-align:left; margin:10px}
+  #myName{float:right; color:#fff; margin-right:1%; margin-top:20px} /*틀 자체는 myService 와 같은 div에서 float:right 적용하였으므로
+  오른쪽에 나타남 */
+  #myName p {float:left; width:250px; font-size:1rem} /*순차적으로 float:left 적용했으므로 왼쪽부터 계속 구현됨*/
+  #logoutBox {float:left; border:1px solid #ccc; margin-top:1px}
+  #logoutBox input{border:none; background:none; padding:0.1rem 0.3rem;
+    margin-top:1px; cursor:pointer;font-size:0.5rem; background:#fff}
+
+  #loginForm{float:right; margin:20px 5px 0 0}
+  #loginEmailArea, #loginPwArea{float:left}
+  #loginEmailArea label, #loginPwArea label{float:left; padding-left:1rem;
+    font-size:1.3em; color:#fff; margin-right:5px} /*label 에 적혀있는 'E=Mail 보다 1.3배 큼*/
+  .loginInputBox{float:left; border:1px solid #ccc; background:#fff}
+  #loginEmailArea input, #loginPwArea input{float:left; padding-left:0.5rem; font-size:1.3em; border:none; background:#fff}
+  .loginSubmitBox{float:right; width:50px; background:#fff; background:#fff; border:1px solid #ccc; margin-left:5px; padding:0.1em}
+  /*submit Box 가 float:right 되어있으므로 맨 끝에위치하는게 당연합니다. */
+  #loginSubmit{float:left; width:100%; background:none; border:none; color:#aaa; font-size:0.7rem}
+  /*submit box의 child 겪인 loginSubmit 이라는 아이디를 가지는 친구에 float:left를 적용시켰네요.*/
+
+}
+/*-------------------------모바일 모드에서 어색함을 없애기 위한 미디어 쿼리입니다.----------------------*/
+@media screen and (max-width:366px){
+  #myService{font-size:1.5rem}
+  #loginEmailArea label, #loginPwArea label{font-size:1rem}
+  #loginEmailArea input, #loginPwArea input{font-size:1rem}
+  .loginSubmitBox{padding:02rem}
+  #loginSubmit{font-size:1rem}
+}
+@media screen and (min-width:367px) and (max-width:458px){
+  #myService {font-size:1.7rem}
+  #loginEmailArea label, #loginPwArea label{font-size:1.2rem}
+  #loginEmailArea input, #loginPwArea input{font-size:1.2rem}
+  .loginSubmitBox{padding:0.2rem}
+  #loginSubmit{font-size:1rem}
+}
+/*-------------------------------------------------------------------------------------------------*/

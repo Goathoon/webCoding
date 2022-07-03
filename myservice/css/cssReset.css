@@ -1,0 +1,13 @@
+@charset "utf-8";
+body,header,footer,p,h1,h2,h3,h4,h5,h6,ul,ol,li,form,label,input,textarea,
+button,select{margin:0;padding:0; font-family:verdana,arial;font-size:10px}
+body{min-width:320px}
+img{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none} /*글자에 어떠한 선이든 넣지 않는다. 알죠? 중앙에선긋기 위에선긋기 underline하기등등 있었던것 */
+a:hover,a:active,a:focus{text-decoration:none}
+/* 순서대로
+hover :링크에 마우스를 올려놓았을때
+active: 링크를 마우스로 클릭한 순간
+focus : 그냥 집중시키는거. 클릭 표시 일듯..? 유추임 */

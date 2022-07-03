@@ -1,0 +1,114 @@
+#signup{display:none} /*회원 가입 폼을 일단 숨기고, introSite 만 보이게 합니다 */
+#introSite{_display:none}
+/*mobile base css source */
+@media screen and (min-width:0px) and (max-width:1199px){
+  body{background:#fff} /*구현 되어지는 화면 전체 배경은 하얀색입니당 */
+  #signupCenter{width:80%} /* signupCenter 분명 첫줄에서 display:none 으로 가렸는데 왜하는거죠??
+  무조건 해야했음. 어차피 저 미디어쿼리가 적용되는 size에서 signupCenter
+  가보여질 때, 가입하는 화면을 조절하기 위해서 했어야 했습니다.*/
+  #introSite{clear:both; float:left; width:100%}
+  #siteComment{margin:10% auto; width:65%; color:#64cbf9} /*좌우 위 아래 여백
+  10%로 설정하고, 가운데정렬하겠습니다 */
+  #signUpBtn{margin: 10% auto 15% auto;width:100px; height:30px; background:#64cbf9;
+  /*margin: % auto % 에서 앞 %는 위 여백인거 같고, 뒤 %는 아래 여백인거 같습니다.
+  margin: 10% auto 5% auto 해도 똑같은거 보니까 그렇네요.*/
+  text-align:center; padding-top: 1em; border-radius:1rem}
+  #signUpBtn p {font-size: 1rem; color:#fff}
+
+  /*로그인 버튼 (모바일에만 적용되므로)꾸미기 */
+  #goToLoginBtn{clear:both; width:30%; height:30px;
+  padding:0.4rem; margin: 0 auto 20px auto; background:#64cbf9; cursor:pointer;
+text-align:center; border-radius:10px}
+  #goToLoginBtn p {font-size:1rem; color:#fff; position:relative; top:5px}
+
+}
+
+/*===================================================
+ ====================common==========================
+ ========('내가 만드는 첫 웹서비스에'로 시작하는 문구는
+PC와 모바일 공통이므로 함께 묶습니다==================
+====================================================*/
+
+/*+ div 태그 =block 형식 span 태그 = inline형식 */
+#siteComment{border: 3px solid #64cbf9; padding:1rem; font-size:2rem;
+color:#64cbf9;}
+#signupCenter{margin: 0 auto}
+#signUpForm{float:left; width:98%; margin:40px 0 40px 0; padding-top:1rem;
+border:1px solid #ccc;
+border-radius:10px}/*signupCenter 가 80%로 조절했으므로 그 속에서
+98%의 너비로 signUpForm이 적용된다. */
+
+.row{clear:both;float:left;width:100%;margin-bottom:1.5em}
+.row label{float:left; width:20%; padding-left:5%; font-size:1.3rem} /* class =row genderRow의 하위 태그인 label도 영향을 줌 */
+.inputBox{float:left; width:90%; background:#fff; margin-left:1rem; border:1px solid #ccc}
+.row input{float:left; width:98%; font-size:1.5rem; margin-left:2%; background:#fff;
+border:none}/*이름, 이메일, 비밀번호 쓰는 창을 조절하는 것*/
+.row .selectBox{float:left; width:21%; border:1px solid #ccc; background:#fff;
+margin-top:3px} /*selectBox (클래스)선택자로 지정할 떄 '.' 꼭 붙이세요.!!!
+태그를 선택자로 할떄는 .안붙여도되는데 잊지마셈
+정리 = row클래스의 하위 클래스인 selectbox클래스에만 적용되는 css속성이다.*/
+.row .selectBox select{float: left; background:#fff url('/myservice/images/index/selectTagBg.png');
+border:none;-webkit-appearance:none;
+-moz-appearance:none; background-size:10px; background-repeat:no-repeat;
+background-position: 90% 5px; width:90%; margin-left:5px; font-size:1rem}
+/*background-position: 90% 5px인 이유는 부모 width의 가로로 90%인 부분에 위치하도록 합니다.그리고 top
+기준 offset 5px위치.*/
+
+
+/*
+<div class="collapse navbar-collapse">
+이게 의미하는 것은 collapase 클래스와 navbar-collapse 클래스가 전부 적용이 된다는 뜻이에용.
+말씀하신 것과 같이 공백을 주게 된다면, 일단 navbar-collapse 와 같이 .을 안붙여주시면 클래스를 의미하지 않
+ 1 됩니당.
+그렇다고
+.collapse .navbar-collapse {
+.....
+}
+위와 같이 쓰게 되면 collapse 클래스가 적용된 태그의 자손 태그 중 navbar-collpase 클래스가 적용된 태그를 가리키게 됩니당. 그러므로 의도와 맞지 않게 되고용.
+
+그래서 원하시는대로 적용되려면
+
+.collapse.navbar-collapse {
+
+...
+
+}
+
+위와 같이 써주셔야 두 클래스가 다 적용된 태그에 속성과 값을 적용하실 수 있으실 겁니당.
+*/
+#birthYear{font-size: 1rem}
+.selectBoxMargin{margin-left:2%; margin-right:2%}
+.genderRow input{width:15px; margin-left:10%; position:relative; top:4px}
+
+#genderLabel{clear:both; width:80%; margin: 0 auto}
+#gMM{border-left:none}
+.genderRow label {float:left; width:49%; border:1px solid #ccc; text-align:center;
+padding-left:0}
+.genderRow input {clear:both; float:none; width:0px; visibility: hidden}
+
+#valueError{float:left;width:100%;text-align:center;color:red;font-size:2em}
+#siteComment{border:3px solid #64cbf9; padding:1rem; font-size:2rem; color:#64cbf9;}
+
+.submitBox{clear:both; float:left; width:25%;padding:0.4rem; background:#64cbf9;
+margin-left:5%;border-radius:10px}
+#signUpSubmit{float:left;width:100%;background:none; color:#fff; text-align:center;
+font-size:1rem}
+
+/*desktop css source */
+@media screen and (min-width:1200px){
+#loginForm{display:block} /*원래도 block인데 왜 block으로 변경했을까요?*/
+#container{float:left; width:100%;min-height:100%;
+background:url('/myservice/images/index/bgImage.jpg');
+background-size:cover}
+#siteComment{margin:2% auto 0 ; width:210px;background:rgba(255,255,255,0.4)}
+#introSite{display:block} /*얘도 마찬가지임 왜?. 이게 또 없으면 구현이 안되네요. 이유는?
+default 가 display:none이네요*/
+#signUpBtn, #goToLoginBtn{display:none}
+#signup{display:block; margin-top:1%; margin-bottom:5%}
+#signupCenter{width:50%}
+#signUpForm{background:rgba(255,255,255,0.8)}
+.inputBox{height:40px}
+.row input{height:40px}
+.submitBox{width:10%;padding:0.2rem}
+}
+/*end of desktop css source */

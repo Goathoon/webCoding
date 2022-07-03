@@ -1,0 +1,163 @@
+<!-- 메인 페이지 만들기 입니다.
+  -로그인 폼
+  -회원가임 폼 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name = "viewport" content = "width = device-width" />
+<!--viewport는 모바일 기기의 실제 해상도를 적용해준다. 웹브라우저에 실제 기기의 화면 해상도를 적용하려면 viewport를 적용해야한다.
+width=device-width는, 너비를 장치너비로 설정하는 것이에용.
+head 태그 안에 소스를 입력 -->
+<!--메타 태그는 head내에서 작성하는 태그이며 문서의 키워드 어떤 문서인지에 대한 설명,
+언어 설정등의 정보를 기입 -> 광고비 절감-->
+<meta charset = "utf-8" />
+<link rel = "stylesheet" href = "./css/cssReset.css" />
+<link rel = "stylesheet" href = "./css/header.css" />
+<link rel = "stylesheet" href = "./css/index.css" />
+<link rel = "stylesheet" href = "./css/footer.css" />
+
+<!-- jQuery를 위한 참조 -->
+<script type = "text/javascript" src ="./js/jquery-3.1.0.min.js"></script>
+<script type = "text/javascript" src ="./js/index.js"></script>
+<script type = "text/javascript" src ="./js/valueCheck.js"></script>
+<!----------------------->
+<title> My First Web Service </title>
+</head>
+<body>
+  <!------------------------------------------첫번째 살붙이기 ---------------------------------------->
+  <!--로그인 후 -->
+  <div id ="viewType">
+    <a href="/myservice/me.html" id ="meLink">me</a> <!--hypertag.html (링크)참고하십쇼 id 이런거는 백엔드에서 다루지 않을까 싶네요..?/내가 아는건 target인뎅-->
+    <a href="/myservice/all.html" id="allLink">all</a>
+  </div>
+  <header>
+    <div id ="myService"> My First Web Service </div>
+    <!-- 로그인 후 -->
+    <div id = "myName">
+      <p>안녕하세요. 김태훈 님 </p>
+      <div id = "logoutBox">
+        <input type="button" id = "logoutBtn" value = "로그아웃"/>
+      </div>
+    </div>
+    <!-- 로그인 전 -->
+    <div id ="loginForm">
+      <form name = "loginForm" method ="post" action ="./login.php"> <!-- 완연한 백엔드 파트 일단, 무시합시다-->
+        <div id ="loginEmailArea">
+          <label for = "loginEmail">E-Mail</label> <!-- labeltag.html 참조하세용 -->
+          <!--label tag는 input 태그와 짝을 이루어 사용한답니다. 예를들어 성별을 선택하는 기능을 만들려고 한다->중복 선택이 안되는 radiobutton을 활용.
+            하지만, 해당 라디오 박스가 무엇을 의미하는지는 사용자가 볼수있는 명칭을 부여해야한다. 이때 label태그 사용.
+            짝을 이루기 위해서는 input 태그에 id속성을 사용한다. id속성은 태그에 이름을 붙이거나 고유한 명칭을 부여할때 사용한다.
+            id속성의 값은 한번만 사용.
+            label 태그에서는 for라는 속성을 사용. label태그에서 사용한 for속성의 값과 input태그의 id속성의 값을 일치시켜야함.
+            이렇게 일치시키면 label태그를 클릭한것 만으로도 해당하는 input태그를 클릭하는 것과 같은 효과도 얻게 된다.-->
+          <div class = "loginInputBox">
+            <input type = "email" id = "loginEmail" name = "email" placeholder="이메일" />
+            <!-- placeholder란, input값의 hint를 제공하는 거였습니다 ("이메일을입력하세요:" 라고 되어있고 커서 올리고 작성하면 없어지는거 아시죵?)-->
+          </div>
+        </div>
+        <div id = "loginPwArea">
+          <label for = "loginPw">Password</label>
+          <div class = "loginInputBox">
+            <input type = "password" name = "userPw" id = "loginPw" placeholder = "비밀번호 8자리 이상 입력" />
+          </div>
+        </div>
+        <div class = "loginSubmitBox">
+          <input type = "submit" id = "loginSubmit" value = "로그인" />
+          </div>
+        </form>
+      </div>
+    </header>
+    <!----------------------------------첫 번째 끝 ------------------------------------------------------------->
+    <!--container-----------------------두 번째 살붙이기 (회원 가입 폼)------------------------------------------>
+    <div id = "container">
+      <section id = "introSite">
+        <div id = "siteComment">
+          내가 만드는 <br />
+          첫 웹서비스에<br />
+          어서오세요.
+        </div>
+        <div id = "signUpBtn"> <!--얘는 처음 가입하기 위한 클릭버튼 -->
+          <p>가입하기 </p>
+        </div>
+      </section>
+      <section id = "signup">
+        <div id = "signupCenter">
+          <form id ="signUpForm" method = "post" action = "./database/myMembr.php">
+            <div class = "row">
+              <div class = "inputBox">
+                <input type = "text" name = "userName" id = "userName" placeholder = "이름" />
+              </div>
+            </div>
+            <div class = "row">
+              <div class = "inputBox">
+                <input type = "email" name = "userEmail" id = "userEmail" placeholder = "이메일" />
+              </div>
+            </div>
+            <div class = "row">
+              <div class = "inputBox">
+                <input type = "password" name = "userPw" id = "userPw" placeholder = "비밀번호" />
+              </div>
+            </div>
+            <div class = "row">
+              <label>생일</label> <!--여기 진짜 모르겠음.. label태근데 왜 input이 없을까..?
+                radio box 클릭할때 label 이랑 같이 작동.
+              그냥 label만 나타내고 싶었나봐요. p태그 써도 상관은 없을듯?-->
+              <div class = "selectBox">
+                <select name = "birthYear" id = "birthYear">
+                  <option value ="">연도</option> <!--연도 월 일들은 모두 표시되어있지 않지만 이부분은
+                    나중에 백엔드에서 해결할 것이다.-->
+                  <option value ="2016">2016</option>
+                  <option value ="2015">2015</option>
+                  <option value ="2014">2014</option>
+                  <option value ="2013">2013</option>
+                </select>
+              </div>
+            <div class = "selectBox selectBoxMargin"><!--select box와 selectboxMargin 둘다 적용
+            다시말해서, css에서 selectBox클래스만 건들여도, 이친구에 적용됨.
+          selectboxmargin만 건들여도 얘도 적용됨 -->
+              <select name = "birthMonth" id = "birthMonth">
+                <option value ="">월</option>
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+              </select>
+            </div>
+            <div class = "selectBox">
+              <select name = "birthDay" id = "birthDay">
+                <option value ="">일</option>
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+              </select>
+            </div>
+          </div>
+          <div class = "row genderRow"> <!-- row , genderRow 따로 같이가는 몸-->
+            <div id ="genderLabel">
+              <label for = "gW" id ="gMW">여성</label>
+              <label for = "gM" id ="gMM">남성</label>
+            </div>
+            <input type = "radio" name = "gender" class = "gender" id ="gW" value = "w" />
+            <input type = "radio" name = "gender" class = "gender" id ="gM" value = "m" />
+          </div>
+          <div class = "row">
+            <p id = "valueError"> </p>
+          </div>
+          <div class = "row">
+            <div class = "submitBox">
+              <input type = "submit" id = "signUpSubmit" value = "가입하기" /><!--회원가입 폼 작성 후 가입하기 버튼 -->
+            </div>
+          </div>
+          <input type = "hidden" name = "mode" value = "save" /> <!--type="hidden"이면, 화면에 표시되지 않고,
+            값을 대입할 수 있다.-->
+        </form>
+        <div id="goToLoginBtn">
+          <p>로그인하기</p>
+        </div>
+      </div>
+      </section>
+    </div>
+    <footer>
+      <p>My First Web Service</p>
+    </footer>
+</body>
+</html>

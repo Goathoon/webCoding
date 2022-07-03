@@ -1,4 +1,7 @@
 /*CSS RESET을 위한 external 방식의 css파일입니다.*/
+/* cssReset이 왜필요했는가를 다시한번 생각해봅시다.
+body 태그와 박스사이에 여백이 존재했는데, 이는 웹브라우저마다 default값이 다르게 설정되어있기 떄문에 이를 통일시켜야함.
+따라서 태그들의 margin, padding의 값을 싹다 0으로 설정해야함 ->cssReset이 필요. */
 @charset "utf-8"; /*여기에만 세미클론을 붙이네요..*/
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,form,input,textarea,button,select{margin:0;padding:0;font-family:verdana,arial;font-size:12px}
 img{border:0}
