@@ -1,0 +1,1 @@
+select min(math) FROM schoolRecord;

@@ -1,0 +1,1 @@
+select max(japanese) FROM schoolRecord;
